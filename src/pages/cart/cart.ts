@@ -75,8 +75,31 @@ export class CartPage {
   }
 
   addOrder(){
-    
-  }
+    var isSussess=false;
+    this.bookRestProvider.getOrderLastId().then((data) => {
+    this.order.orderId = Number(data)+1;
+    }
+    ).then( () => {
+    this.bookRestProvider.editOrderLastId(this.order.orderId).then( () => {
+    this.order.orderdetail=this.books;
+    this.order.total=this.total;
+    this.bookRestProvider.addOrder(this.order).then( () => {
+    this.presentToast("Add order successfully!");
+    this.clearOrder();
+    this.clearCart();
+    isSussess=true;
+    }, (err) => {
+    console.log(err);
+    });
+    }, (err) => {
+    console.log(err);
+    });
+    }
+    );
+    if (isSussess){
+    this.viewCtrl.dismiss({clear:this.clear});
+    }
+    }
   
 
   clearOrder() {

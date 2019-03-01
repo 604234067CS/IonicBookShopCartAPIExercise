@@ -65,8 +65,25 @@
     </div>
     
     <div *ngIf="checkout" >
-        
-        
+      <form (ngSubmit)="confirmOrder()">
+      <ion-item>
+      <ion-label>Name:</ion-label>
+      <ion-input type="text" [(ngModel)]="order.name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label>Address:</ion-label>
+      <ion-textarea [(ngModel)]="order.address" name="address"></ion-textarea>
+      </ion-item>
+      <ion-item>
+      <ion-label>Province:</ion-label>
+      <ion-input type="text" [(ngModel)]="order.province" name="province"></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label>Postal:</ion-label>
+      <ion-input type="number" [(ngModel)]="order.postal" name="postal"></ion-input>
+      </ion-item>
+      <button ion-button color="secondary" type="submit" block>Confirm Order</button>
+      </form>
       </div>
     
     <button ion-button full color="danger" (click)="clearCart()"  *ngIf="books && !checkout">Clear Cart</button>
