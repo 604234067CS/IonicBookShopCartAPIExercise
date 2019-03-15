@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { BookListPage } from '../book-list/book-list';
 import { CartPage } from '../cart/cart';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-book-category',
@@ -44,6 +45,9 @@ export class BookCategoryPage {
       {category:categoryName}
       );
     
+  }
+  goLogout4(){
+    this.navCtrl.push(LoginPage);
   }
 
 }

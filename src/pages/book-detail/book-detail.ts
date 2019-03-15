@@ -3,6 +3,7 @@ import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { Book } from '../../../models/book.model';
 import { BookRestProvider } from '../../providers/book-rest/book-rest';
 import { CartPage } from '../cart/cart';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-book-detail',
@@ -90,4 +91,7 @@ localStorage.setItem('total', total);
     this.navCtrl.pop();
   }
 
+  goLogout3(){
+    this.navCtrl.push(LoginPage);
+  }
 }

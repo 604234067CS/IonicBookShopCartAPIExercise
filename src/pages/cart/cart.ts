@@ -123,6 +123,7 @@ export class CartPage {
     this.viewCtrl.dismiss({clear:this.clear});
   }
 
+ 
 
 
 }

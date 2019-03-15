@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+    <ion-item no-lines style="text-alikgn: center" >
+        <img src="../../assets/imgs/bookshop_small.jpg" >
+    </ion-item>
+  
+  <ion-item>
+    <ion-label floating>username</ion-label>
+    <ion-input #Usernameinput type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>password</ion-label>
+    <ion-input #Passwordinput type="password" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>confirmPassword</ion-label>
+    <ion-input #Confirmpasswordinput type="password" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>email</ion-label>
+    <ion-input #Emailinput type="text" value=""></ion-input>
+  </ion-item>
+
+  <div style="margin-top: 20px;">
+    <button ion-button full color="dark" (click)="goAccount()">register</button>
+  </div>
+
+
+</ion-content>

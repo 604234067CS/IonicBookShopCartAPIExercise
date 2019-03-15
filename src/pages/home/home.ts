@@ -3,6 +3,7 @@ import { NavController,  ModalController } from 'ionic-angular';
 import { BookCategoryPage } from '../book-category/book-category';
 import { CartPage } from '../cart/cart';
 import { TopsellerPage } from '../topseller/topseller';
+import { LoginPage } from '../login/login';
 
 
 
@@ -64,7 +65,9 @@ export class HomePage {
     this.navCtrl.push(BookCategoryPage);
   }
 
-  
+  goLogin(){
+    this.navCtrl.push(LoginPage);
+  }
 
   
 

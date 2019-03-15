@@ -4,6 +4,7 @@ import { BookDetailPage } from '../book-detail/book-detail';
 import { Book } from '../../../models/book.model';
 import { BookRestProvider } from '../../providers/book-rest/book-rest';
 import { CartPage } from '../cart/cart';
+import { LoginPage } from '../login/login';
 
 
 
@@ -155,4 +156,7 @@ console.log(err);
     this.navCtrl.pop();
   }
 
+  goLogout2() {
+    this.navCtrl.push(LoginPage);
+  }
 }

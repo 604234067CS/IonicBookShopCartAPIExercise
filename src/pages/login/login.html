@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item no-lines style="text-alikgn: center" >
+          <img src="../../assets/imgs/bookshop_small.jpg" >
+      </ion-item>
+    
+
+    <ion-item>
+      <ion-label floating>username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  
+    <div style="margin-top: 20px;">
+      <button ion-button small color="dark" (click)="goHome1()">Login</button>
+    </div>
+
+    <div style="margin-top: 5px;">
+      <button ion-button small color="dark" (click)="goRegister()">register</button>
+    </div>
+
+  </ion-list>
+</ion-content>
